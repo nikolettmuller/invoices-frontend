@@ -1,0 +1,19 @@
+<mat-card><div class="center">
+    <div><h2>Create new customer</h2></div>
+    <form [formGroup]="form" (submit)="submit()">
+        <div>
+            <mat-form-field appearence="fill">
+                <mat-label>Customer name</mat-label>
+                <input required matInput type="text" name="customerName" formControlName="customerName"/>
+            </mat-form-field>
+        </div>
+        <div mat-dialog-actions class="submit">
+            <button mat-raised-button color="primary" >Submit</button>
+        </div>
+    </form>
+</div>
+</mat-card>
+<div class="wrapper">
+    <button  mat-raised-button color="primary" (click)="back()" >Back</button>
+</div>
+

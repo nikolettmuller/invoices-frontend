@@ -1,0 +1,32 @@
+<mat-card><div class="center">
+    <div><h2>Create new item</h2></div>
+    <form [formGroup]="form" (submit)="submitItem()">
+        <div>
+            <mat-form-field appearence="fill">
+                <mat-label>Product name</mat-label>
+                <input required matInput type="text" name="productName" formControlName="productName"/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearence="fill">
+                <mat-label>Unit price</mat-label>
+                <input required matInput type="text" name="unitPrice" formControlName="unitPrice"/>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearence="fill">
+                <mat-label>Quantity</mat-label>
+                <input required matInput type="text" name="quantity" formControlName="quantity"/>
+            </mat-form-field>
+        </div>
+        <div mat-dialog-actions class="submit">
+            <button mat-raised-button color="primary">Submit</button>
+        </div>
+    </form>
+</div>
+</mat-card>
+<div class="wrapper">
+    <button  mat-raised-button color="primary" (click)="back()" >Back</button>
+</div>
+
+

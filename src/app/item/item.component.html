@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-content *ngFor="let item of items">
+      <mat-list>
+        <mat-list-item> {{"Invoice ID: "}} {{item.invoiceId}} {{" | "}} {{"Product Name: "}} {{item.productName}} {{" | "}} {{"Unit price: "}} {{item.unitPrice}} {{" | "}} {{"Quantity: "}} {{item.quantity}} {{" | "}} {{"Total price in HUF: "}} {{item.totalInHuf}} {{" | "}} {{"Total price in EUR: "}} {{item.totalInEur}}</mat-list-item>
+      </mat-list>
+    </mat-card-content>  
+  </mat-card>
+  <div class="back">
+    <button  mat-raised-button color="primary" (click)="back()">Back</button>
+  </div>
+  &nbsp;
+  <div class="create">
+  <button  mat-raised-button color="primary" (click)="create()">Create</button>
+  </div>

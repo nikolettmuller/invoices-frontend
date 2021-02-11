@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-content *ngFor="let invoice of invoices">
+      <mat-list>
+        <mat-list-item> {{"Customer Name: "}} {{invoice.customerName}} {{" | "}} {{"Issue Date: "}} {{invoice.issueDate}} {{" | "}} {{"Due Date: "}} {{invoice.dueDate}} {{" | "}} {{"Total price in HUF: "}} {{invoice.totalInHuf}} {{" | "}} {{"Total price in EUR: "}}{{invoice.totalInEur}}
+            <button  mat-raised-button color="primary" (click)="open(invoice.invoiceId)" style="position: absolute; right: 0;">Items</button>
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>  
+  </mat-card>
+  <div class="wrapper">
+      <button  mat-raised-button color="primary" (click)="create()">Create</button>
+</div>
+  
+ 
